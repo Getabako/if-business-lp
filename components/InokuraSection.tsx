@@ -94,7 +94,7 @@ export default function InokuraSection() {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `url('/wp-content/uploads/2025/04/イノクラの仮想世界.png')`,
+            backgroundImage: `url('https://service.if-juku.net/wp-content/uploads/2025/04/イノクラの仮想世界.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

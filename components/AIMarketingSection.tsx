@@ -13,7 +13,7 @@ interface MarketingService {
 const services: MarketingService[] = [
   {
     title: 'SNS運用',
-            image: '/wp-content/uploads/2025/04/7.png',
+            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/7.png',
     features: [
       '複数SNSの戦略的運用',
       'エンゲージメント向上施策',
@@ -23,7 +23,7 @@ const services: MarketingService[] = [
   },
   {
     title: 'LINE開発',
-            image: '/wp-content/uploads/2025/04/8.png',
+            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/8.png',
     features: [
       '自動応答・予約連携',
       'ステップ配信設計',
@@ -33,7 +33,7 @@ const services: MarketingService[] = [
   },
   {
     title: '広報デザイン',
-            image: '/wp-content/uploads/2025/04/9.png',
+            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/9.png',
     features: [
       'プロモーション動画制作',
       '販促ツールデザイン',
@@ -168,6 +168,12 @@ export default function AIMarketingSection() {
                       {service.price}
                     </span>
                     <motion.button
+                      onClick={() => {
+                        const element = document.getElementById('contact')
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' })
+                        }
+                      }}
                       whileHover={{ 
                         scale: 1.05, 
                         boxShadow: "0 10px 25px rgba(249, 115, 22, 0.4)",

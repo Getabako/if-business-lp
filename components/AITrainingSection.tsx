@@ -121,6 +121,12 @@ export default function AITrainingSection() {
               </div>
               
               <motion.button
+                onClick={() => {
+                  const element = document.getElementById('contact')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)",
@@ -157,7 +163,7 @@ export default function AITrainingSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="/wp-content/uploads/2025/04/2.png"
+                src="https://service.if-juku.net/wp-content/uploads/2025/04/2.png"
                 alt="AI人材育成プラン"
                 width={600}
                 height={400}

@@ -51,7 +51,7 @@ export default function FAQSection() {
     <section
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden py-20"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-17_01_26.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://service.if-juku.net/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-17_01_26.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

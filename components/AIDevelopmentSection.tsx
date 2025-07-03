@@ -30,7 +30,7 @@ export default function AIDevelopmentSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="/wp-content/uploads/2025/04/3.png"
+                src="https://service.if-juku.net/wp-content/uploads/2025/04/3.png"
                 alt="AI開発支援プラン"
                 width={600}
                 height={400}
@@ -112,6 +112,12 @@ export default function AIDevelopmentSection() {
               </div>
               
               <motion.button
+                onClick={() => {
+                  const element = document.getElementById('contact')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 20px 40px rgba(59, 130, 246, 0.5)",

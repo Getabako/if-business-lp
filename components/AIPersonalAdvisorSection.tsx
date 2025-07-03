@@ -63,7 +63,7 @@ export default function AIPersonalAdvisorSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="/wp-content/uploads/2025/05/ChatGPT-Image-2025年5月25日-17_31_45.png"
+                src="https://service.if-juku.net/wp-content/uploads/2025/04/1.png"
                 alt="AIパーソナル顧問プラン"
                 width={600}
                 height={400}
@@ -149,6 +149,12 @@ export default function AIPersonalAdvisorSection() {
               </div>
               
               <motion.button
+                onClick={() => {
+                  const element = document.getElementById('contact')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
                 whileHover={{ 
                   scale: 1.05, 
                   boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)",

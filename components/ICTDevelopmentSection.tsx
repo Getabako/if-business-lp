@@ -13,7 +13,7 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     title: 'LP開発',
-            image: '/wp-content/uploads/2025/04/4.png',
+            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/4.png',
     features: [
       '目的に最適化されたデザイン',
       'ユーザー心理を考慮したCTA',
@@ -24,7 +24,7 @@ const services: ServiceCard[] = [
   },
   {
     title: 'Web開発',
-            image: '/wp-content/uploads/2025/04/5-scaled.png',
+            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/5-scaled.png',
     features: [
       'ECサイト構築',
       '予約・在庫管理システム',
@@ -35,7 +35,7 @@ const services: ServiceCard[] = [
   },
   {
     title: 'ゲーム開発',
-            image: '/wp-content/uploads/2025/04/6-scaled.png',
+            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/6-scaled.png',
     features: [
       '企業PRゲーム',
       'ゲーミフィケーション',
@@ -155,6 +155,12 @@ export default function ICTDevelopmentSection() {
                   <div className="flex items-baseline justify-between">
                     <span className="text-2xl font-bold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent">{service.price}</span>
                     <motion.button
+                      onClick={() => {
+                        const element = document.getElementById('contact')
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' })
+                        }
+                      }}
                       whileHover={{ 
                         scale: 1.05, 
                         boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)",

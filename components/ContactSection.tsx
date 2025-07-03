@@ -45,7 +45,7 @@ export default function ContactSection() {
     <section
       className="section-full relative"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-17_05_49.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://service.if-juku.net/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-17_05_49.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

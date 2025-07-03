@@ -69,7 +69,7 @@ export default function ServiceNavigationSection() {
       id="service-navigation"
       className="relative min-h-screen flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/wp-content/uploads/2025/04/An_abstract_background_representing_data_analysis_-1745739047865-scaled.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://service.if-juku.net/wp-content/uploads/2025/04/An_abstract_background_representing_data_analysis_-1745739047865-scaled.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

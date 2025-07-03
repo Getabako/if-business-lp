@@ -165,6 +165,12 @@ export default function AICoursesSection() {
                   <div className="text-sm opacity-80 mb-2">受講料金</div>
                   <div className="text-4xl font-bold mb-4">{courses[activeIndex].price}</div>
                   <motion.button
+                    onClick={() => {
+                      const element = document.getElementById('contact')
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' })
+                      }
+                    }}
                     className="relative bg-white text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 w-full overflow-hidden group shadow-lg"
                     whileHover={{ 
                       scale: 1.05,
