@@ -155,11 +155,29 @@ export default function ICTDevelopmentSection() {
                   <div className="flex items-baseline justify-between">
                     <span className="text-2xl font-bold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent">{service.price}</span>
                     <motion.button
-                      whileHover={{ scale: 1.05, boxShadow: "0 8px 20px rgba(59, 130, 246, 0.2)" }}
+                      whileHover={{ 
+                        scale: 1.05, 
+                        boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)",
+                        y: -1
+                      }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-gradient-to-r from-slate-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm"
+                      className="relative bg-gradient-to-r from-slate-500 via-blue-500 to-indigo-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm overflow-hidden group"
                     >
-                      詳細を見る
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        initial={{ x: "-100%" }}
+                        whileHover={{ x: "100%" }}
+                        transition={{ duration: 0.6 }}
+                      />
+                      <span className="relative z-10 flex items-center justify-center space-x-1">
+                        <span>お見積り</span>
+                        <motion.span
+                          animate={{ x: [0, 3, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        >
+                          💼
+                        </motion.span>
+                      </span>
                     </motion.button>
                   </div>
                 </div>

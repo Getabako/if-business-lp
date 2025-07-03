@@ -149,22 +149,21 @@ export default function ServiceNavigationSection() {
                   </p>
                   
                   {/* CTA */}
-                  <div className="flex items-center text-blue-400 font-medium group-hover:text-blue-300 transition-colors">
-                    <span>詳細を見る</span>
-                    <motion.svg 
-                      className="ml-2 h-5 w-5"
-                      fill="none" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth="2" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                      <path d="M9 18l6-6-6-6"></path>
-                    </motion.svg>
-                  </div>
+                  <motion.div
+                    className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-400/30 rounded-xl p-3 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300"
+                    whileHover={{ y: -2 }}
+                  >
+                    <div className="flex items-center justify-center text-blue-300 font-bold group-hover:text-white transition-colors">
+                      <span>選択する</span>
+                      <motion.span
+                        className="ml-2"
+                        animate={{ x: [0, 3, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        ✨
+                      </motion.span>
+                    </div>
+                  </motion.div>
                 </div>
                 
                 {/* Animated border */}

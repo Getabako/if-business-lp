@@ -112,11 +112,29 @@ export default function AIDevelopmentSection() {
               </div>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.5)",
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="relative w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold py-5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
-                詳細を見る・お問い合わせ
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.6 }}
+                />
+                <span className="relative z-10 flex items-center justify-center space-x-2">
+                  <span>開発を依頼する</span>
+                  <motion.span
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    🚀
+                  </motion.span>
+                </span>
               </motion.button>
             </motion.div>
           </motion.div>

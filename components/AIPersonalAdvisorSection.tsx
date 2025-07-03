@@ -63,7 +63,7 @@ export default function AIPersonalAdvisorSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="/wp-content/uploads/2025/04/1.png"
+                src="/wp-content/uploads/2025/05/ChatGPT-Image-2025年5月25日-17_31_45.png"
                 alt="AIパーソナル顧問プラン"
                 width={600}
                 height={400}
@@ -149,11 +149,29 @@ export default function AIPersonalAdvisorSection() {
               </div>
               
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)",
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="relative w-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white font-bold py-5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
-                詳細を見る・お問い合わせ
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.6 }}
+                />
+                <span className="relative z-10 flex items-center justify-center space-x-2">
+                  <span>今すぐ相談する</span>
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    💬
+                  </motion.span>
+                </span>
               </motion.button>
             </motion.div>
           </motion.div>

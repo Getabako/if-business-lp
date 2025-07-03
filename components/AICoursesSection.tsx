@@ -165,11 +165,29 @@ export default function AICoursesSection() {
                   <div className="text-sm opacity-80 mb-2">受講料金</div>
                   <div className="text-4xl font-bold mb-4">{courses[activeIndex].price}</div>
                   <motion.button
-                    className="bg-white text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors w-full"
-                    whileHover={{ scale: 1.05 }}
+                    className="relative bg-white text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 w-full overflow-hidden group shadow-lg"
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: "0 15px 30px rgba(255, 255, 255, 0.3)",
+                      y: -2
+                    }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    詳細を見る・お申し込み
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: "100%" }}
+                      transition={{ duration: 0.6 }}
+                    />
+                    <span className="relative z-10 flex items-center justify-center space-x-2">
+                      <span>今すぐ受講申し込み</span>
+                      <motion.span
+                        animate={{ y: [0, -3, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        🚀
+                      </motion.span>
+                    </span>
                   </motion.button>
                 </motion.div>
                 

@@ -121,11 +121,29 @@ export default function AITrainingSection() {
               </div>
               
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(147, 51, 234, 0.3)" }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)",
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-purple-500 to-violet-500 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="relative w-full bg-gradient-to-r from-purple-500 via-violet-500 to-purple-600 text-white font-bold py-5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
-                詳細を見る・お問い合わせ
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.6 }}
+                />
+                <span className="relative z-10 flex items-center justify-center space-x-2">
+                  <span>研修を始める</span>
+                  <motion.span
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    🎓
+                  </motion.span>
+                </span>
               </motion.button>
             </motion.div>
           </motion.div>

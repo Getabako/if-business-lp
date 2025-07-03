@@ -168,11 +168,29 @@ export default function AIMarketingSection() {
                       {service.price}
                     </span>
                     <motion.button
-                      whileHover={{ scale: 1.05, boxShadow: "0 8px 20px rgba(249, 115, 22, 0.3)" }}
+                      whileHover={{ 
+                        scale: 1.05, 
+                        boxShadow: "0 10px 25px rgba(249, 115, 22, 0.4)",
+                        y: -1
+                      }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm"
+                      className="relative bg-gradient-to-r from-rose-500 via-orange-500 to-amber-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm overflow-hidden group"
                     >
-                      詳細を見る
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        initial={{ x: "-100%" }}
+                        whileHover={{ x: "100%" }}
+                        transition={{ duration: 0.6 }}
+                      />
+                      <span className="relative z-10 flex items-center justify-center space-x-1">
+                        <span>企画提案</span>
+                        <motion.span
+                          animate={{ rotate: [0, 15, -15, 0] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        >
+                          📈
+                        </motion.span>
+                      </span>
                     </motion.button>
                   </div>
                 </div>
