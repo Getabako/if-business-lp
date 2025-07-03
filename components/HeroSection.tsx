@@ -23,10 +23,7 @@ export default function HeroSection() {
 
   // 動画ソースの選択をクライアント側で行う
   const getVideoSrc = () => {
-    if (!isMounted) return 'https://service.if-juku.net/videos/lpmoviepc.mp4'
-    return window.innerWidth <= 768 
-      ? 'https://service.if-juku.net/videos/lpmoviesp.mp4'
-      : 'https://service.if-juku.net/videos/lpmoviepc.mp4'
+    return 'https://service.if-juku.net/videos/lpmoviepc.mp4';
   }
 
   return (
