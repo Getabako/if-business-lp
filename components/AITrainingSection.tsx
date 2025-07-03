@@ -163,7 +163,7 @@ export default function AITrainingSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="https://service.if-juku.net/wp-content/uploads/2025/04/2.png"
+                src="https://service.if-juku.net/images/4.png"
                 alt="AI人材育成プラン"
                 width={600}
                 height={400}

@@ -36,7 +36,7 @@ export default function TakumiWorkshopSection() {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url('https://service.if-juku.net/wp-content/uploads/2025/04/匠の工房でコンピューター製作.png')`,
+            backgroundImage: `url('https://service.if-juku.net/images/12.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

@@ -50,7 +50,7 @@ export default function AIImplementationSection() {
     <section 
       className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden py-20"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://service.if-juku.net/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-16_58_29.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://service.if-juku.net/images/14.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

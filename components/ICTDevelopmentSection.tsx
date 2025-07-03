@@ -13,7 +13,7 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     title: 'LP開発',
-            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/4.png',
+            image: 'https://service.if-juku.net/images/6.png',
     features: [
       '目的に最適化されたデザイン',
       'ユーザー心理を考慮したCTA',
@@ -24,7 +24,7 @@ const services: ServiceCard[] = [
   },
   {
     title: 'Web開発',
-            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/5-scaled.png',
+            image: 'https://service.if-juku.net/images/7.png',
     features: [
       'ECサイト構築',
       '予約・在庫管理システム',
@@ -35,7 +35,7 @@ const services: ServiceCard[] = [
   },
   {
     title: 'ゲーム開発',
-            image: 'https://service.if-juku.net/wp-content/uploads/2025/04/6-scaled.png',
+            image: 'https://service.if-juku.net/images/8.png',
     features: [
       '企業PRゲーム',
       'ゲーミフィケーション',

@@ -30,7 +30,7 @@ export default function AIDevelopmentSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="https://service.if-juku.net/wp-content/uploads/2025/04/3.png"
+                src="https://service.if-juku.net/images/5.png"
                 alt="AI開発支援プラン"
                 width={600}
                 height={400}

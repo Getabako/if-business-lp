@@ -23,10 +23,10 @@ export default function HeroSection() {
 
   // 動画ソースの選択をクライアント側で行う
   const getVideoSrc = () => {
-    if (!isMounted) return 'https://service.if-juku.net/wp-content/uploads/2025/04/lpmoviepc.mp4'
+    if (!isMounted) return 'https://service.if-juku.net/videos/lpmoviepc.mp4'
     return window.innerWidth <= 768 
-      ? 'https://service.if-juku.net/wp-content/uploads/2025/04/lpmoviesp.mp4'
-      : 'https://service.if-juku.net/wp-content/uploads/2025/04/lpmoviepc.mp4'
+      ? 'https://service.if-juku.net/videos/lpmoviesp.mp4'
+      : 'https://service.if-juku.net/videos/lpmoviepc.mp4'
   }
 
   return (
@@ -52,7 +52,7 @@ export default function HeroSection() {
           <div 
             className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://service.if-juku.net/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-16_58_29.png')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://service.if-juku.net/images/0.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
