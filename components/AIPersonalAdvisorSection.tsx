@@ -63,7 +63,7 @@ export default function AIPersonalAdvisorSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1JSvvMe1yByfMt2KWC3ps4TMhhtQ7C91Q"
+                src="/wp-content/uploads/2025/04/1.png"
                 alt="AIパーソナル顧問プラン"
                 width={600}
                 height={400}

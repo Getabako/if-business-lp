@@ -42,7 +42,7 @@ export default function CompanyInfoSection() {
     <section 
       className="relative min-h-screen bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800 py-20 overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://drive.google.com/uc?export=view&id=1dNImuv51IYOevJBWJXJOB4-bLYf4EHX5')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/wp-content/uploads/2025/04/scroll1.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'

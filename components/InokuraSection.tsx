@@ -94,7 +94,7 @@ export default function InokuraSection() {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `url('https://drive.google.com/uc?export=view&id=1RElpQxEb2BB5x_HjGnOm32nMaf78nfsJ')`,
+            backgroundImage: `url('/wp-content/uploads/2025/04/イノクラの仮想世界.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

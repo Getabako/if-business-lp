@@ -139,7 +139,7 @@ export default function AITrainingSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1KDF6J5q0ieh_Bp-R3mFP5mc9zEMpyvsU"
+                src="/wp-content/uploads/2025/04/2.png"
                 alt="AI人材育成プラン"
                 width={600}
                 height={400}

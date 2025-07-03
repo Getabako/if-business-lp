@@ -13,7 +13,7 @@ interface MarketingService {
 const services: MarketingService[] = [
   {
     title: 'SNS運用',
-            image: 'https://drive.google.com/uc?export=view&id=1C3yZgsIQZZTyuG1WnMhwAKdChOJx6uBp',
+            image: '/wp-content/uploads/2025/04/7.png',
     features: [
       '複数SNSの戦略的運用',
       'エンゲージメント向上施策',
@@ -23,7 +23,7 @@ const services: MarketingService[] = [
   },
   {
     title: 'LINE開発',
-            image: 'https://drive.google.com/uc?export=view&id=1DkR9ZIWJeIjBiQyE1Qk1Odnh5806flgd',
+            image: '/wp-content/uploads/2025/04/8.png',
     features: [
       '自動応答・予約連携',
       'ステップ配信設計',
@@ -33,7 +33,7 @@ const services: MarketingService[] = [
   },
   {
     title: '広報デザイン',
-            image: 'https://drive.google.com/uc?export=view&id=1qRt6769vCCGbXeapE6NbmjfHGXrZoR48',
+            image: '/wp-content/uploads/2025/04/9.png',
     features: [
       'プロモーション動画制作',
       '販促ツールデザイン',

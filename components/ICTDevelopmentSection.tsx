@@ -13,7 +13,7 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     title: 'LP開発',
-            image: 'https://drive.google.com/uc?export=view&id=1jY3w_st1LdVWK6JR8QJ6nNzjh5CPhSBo',
+            image: '/wp-content/uploads/2025/04/4.png',
     features: [
       '目的に最適化されたデザイン',
       'ユーザー心理を考慮したCTA',
@@ -24,7 +24,7 @@ const services: ServiceCard[] = [
   },
   {
     title: 'Web開発',
-            image: 'https://drive.google.com/uc?export=view&id=1au7ptvhatSyty_u6MGgvqSNsCDjFoZPm',
+            image: '/wp-content/uploads/2025/04/5-scaled.png',
     features: [
       'ECサイト構築',
       '予約・在庫管理システム',
@@ -35,7 +35,7 @@ const services: ServiceCard[] = [
   },
   {
     title: 'ゲーム開発',
-            image: 'https://drive.google.com/uc?export=view&id=1ZzjDXqRCuIIM1WLZI4LhjzGU8HnVtxlK',
+            image: '/wp-content/uploads/2025/04/6-scaled.png',
     features: [
       '企業PRゲーム',
       'ゲーミフィケーション',

@@ -23,10 +23,10 @@ export default function HeroSection() {
 
   // 動画ソースの選択をクライアント側で行う
   const getVideoSrc = () => {
-    if (!isMounted) return 'https://drive.google.com/uc?export=view&id=1ctzV-V7xGmO15N5j4plVNdDxt7kfoZ4k'
+    if (!isMounted) return '/wp-content/uploads/2025/04/lpmoviepc.mp4'
     return window.innerWidth <= 768 
-      ? 'https://drive.google.com/uc?export=view&id=1PhMnKKfhGHvN6-jkfVC4-Op-h414iXNn'
-      : 'https://drive.google.com/uc?export=view&id=1ctzV-V7xGmO15N5j4plVNdDxt7kfoZ4k'
+      ? '/wp-content/uploads/2025/04/lpmoviesp.mp4'
+      : '/wp-content/uploads/2025/04/lpmoviepc.mp4'
   }
 
   return (
@@ -52,7 +52,7 @@ export default function HeroSection() {
           <div 
             className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://drive.google.com/uc?export=view&id=1_VhuN0an6HKRvO-AKb0ntIIKUCwRh0ck')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/wp-content/uploads/2025/04/ChatGPT-Image-2025年4月27日-16_58_29.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

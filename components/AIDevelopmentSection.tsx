@@ -30,7 +30,7 @@ export default function AIDevelopmentSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1MBLl8-AmHqyVQAQGwRxlfhxTQIPcTbef"
+                src="/wp-content/uploads/2025/04/3.png"
                 alt="AI開発支援プラン"
                 width={600}
                 height={400}

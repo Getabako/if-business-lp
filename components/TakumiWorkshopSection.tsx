@@ -36,7 +36,7 @@ export default function TakumiWorkshopSection() {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url('https://drive.google.com/uc?export=view&id=1wysqPAJrlHaCONmPc7KmQwLIg-AoMzaP')`,
+            backgroundImage: `url('/wp-content/uploads/2025/04/匠の工房でコンピューター製作.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
