@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if(Business) LP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/index.umd.min.js"></script>
+</head>
+<body class="bg-gray-900">
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="h-full w-full object-cover">
+                <source src="https://service.if-juku.net/wp-content/uploads/2025/04/lpmoviepc.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
+            <h1 class="mb-6 text-4xl font-bold leading-tight md:text-6xl lg:text-7xl animate-fadeIn">
+                売上拡大と業務効率化を最大に
+            </h1>
+            
+            <p class="mb-8 text-lg md:text-xl lg:text-2xl">
+                ―経営者から現場まで成果を生むAI運用を、導入から継続的に伴走サポート―
+            </p>
+            
+            <p class="mb-12 text-base md:text-lg lg:text-xl opacity-90">
+                AIを基盤に、日々の業務で"使うほど面白い"仕組みを設計。<br>
+                経営者も従業員も自然にAIを活用し、売上拡大と効率化を同時に伸ばす伴走型トレーニングを提供します。
+            </p>
+            
+            <button class="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-gray-100 hover:shadow-lg transform hover:-translate-y-1"
+                    onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+                サービス一覧を見る
+            </button>
+        </div>
+    </section>
+
+    <!-- Service Navigation -->
+    <section id="services" class="min-h-screen w-full flex items-center justify-center bg-cover bg-center relative"
+             style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://service.if-juku.net/wp-content/uploads/2025/04/An_abstract_background_representing_data_analysis_-1745739047865-scaled.png')">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="mb-16 text-center text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+                サービス一覧
+            </h2>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+                <div class="group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white hover:scale-105">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="text-6xl">👨‍💼</div>
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            AIパーソナル顧問プラン
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white hover:scale-105">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="text-6xl">🎓</div>
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            AI人材育成プラン
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white hover:scale-105">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="text-6xl">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            AI開発支援プラン
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white hover:scale-105">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="text-6xl">💻</div>
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            ICT開発サービス
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white hover:scale-105">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="text-6xl">📊</div>
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            AIマーケティングサポート
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white hover:scale-105">
+                    <div class="flex flex-col items-center space-y-4">
+                        <div class="text-6xl">📚</div>
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            AI講座プログラム
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Personal Advisor Plan -->
+    <section class="min-h-screen w-full flex items-center justify-center bg-cover bg-center relative"
+             style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://service.if-juku.net/wp-content/uploads/2025/05/ChatGPT-Image-2025年5月25日-17_31_45.png')">
+        <div class="container mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                <div class="relative">
+                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                        <img src="https://service.if-juku.net/wp-content/uploads/2025/04/1.png" 
+                             alt="AIパーソナル顧問プラン" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                        AIパーソナル顧問プラン
+                    </h2>
+                    <p class="text-xl text-gray-700">
+                        ― 経営者専用AI/ITエキスパートを月額で
+                    </p>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-gray-800">特徴</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span class="text-gray-700">資料作成支援</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span class="text-gray-700">SNS・ブログ運用サポート</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span class="text-gray-700">AIツール導入伴走</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span class="text-gray-700">チャット相談48h以内返信</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span class="text-gray-700">月1回60分オンラインMTG</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-baseline space-x-2">
+                            <span class="text-4xl font-bold text-blue-600">¥55,000</span>
+                            <span class="text-xl text-gray-600">/月</span>
+                        </div>
+                        
+                        <button class="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-1">
+                            詳細を見る・お問い合わせ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</body>
+</html>

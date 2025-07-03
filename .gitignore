@@ -1,0 +1,59 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+
+# Mac
+.DS_Store
+
+# Logs
+logs
+*.log
+# Video files
+*.mp4
+
+# Large image files
+public/wp-content/uploads/2025/04/%E3%82%A4%E3%83%8E%E3%82%AF%E3%83%A9%E3%81%AE%E4%BB%AE%E6%83%B3%E4%B8%96%E7%95%8C.png
+public/wp-content/uploads/2025/04/%E5%8C%A0%E3%81%AE%E5%B7%A5%E6%88%BF%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E8%A3%BD%E4%BD%9C.png
+public/wp-content/uploads/2025/04/5-scaled.png
+public/wp-content/uploads/2025/04/6-scaled.png
+public/wp-content/uploads/2025/04/7.png
+public/wp-content/uploads/2025/04/ChatGPT-Image-2025%E5%B9%B44%E6%9C%8827%E6%97%A5-16_58_29.png
+public/wp-content/uploads/2025/04/ChatGPT-Image-2025%E5%B9%B44%E6%9C%8827%E6%97%A5-17_01_26.png
+public/wp-content/uploads/2025/04/ChatGPT-Image-2025%E5%B9%B44%E6%9C%8827%E6%97%A5-17_05_49.png
+public/wp-content/uploads/2025/04/scroll1.png
