@@ -49,7 +49,7 @@ export default function HeroSection() {
           <div 
             className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://service.if-juku.net/images/0.png')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://if-juku.net/wp-content/uploads/images/0.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

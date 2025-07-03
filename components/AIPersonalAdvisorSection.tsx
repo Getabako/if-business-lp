@@ -63,7 +63,7 @@ export default function AIPersonalAdvisorSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="https://service.if-juku.net/images/3.png"
+                src="https://if-juku.net/wp-content/uploads/images/3.png"
                 alt="AIパーソナル顧問プラン"
                 width={600}
                 height={400}

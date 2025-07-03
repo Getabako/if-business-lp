@@ -13,7 +13,7 @@ interface MarketingService {
 const services: MarketingService[] = [
   {
     title: 'SNS運用',
-            image: 'https://service.if-juku.net/images/9.png',
+    image: 'https://if-juku.net/wp-content/uploads/images/9.png',
     features: [
       '複数SNSの戦略的運用',
       'エンゲージメント向上施策',
@@ -23,7 +23,7 @@ const services: MarketingService[] = [
   },
   {
     title: 'LINE開発',
-            image: 'https://service.if-juku.net/images/10.png',
+    image: 'https://if-juku.net/wp-content/uploads/images/10.png',
     features: [
       '自動応答・予約連携',
       'ステップ配信設計',
@@ -33,7 +33,7 @@ const services: MarketingService[] = [
   },
   {
     title: '広報デザイン',
-            image: 'https://service.if-juku.net/images/11.png',
+    image: 'https://if-juku.net/wp-content/uploads/images/11.png',
     features: [
       'プロモーション動画制作',
       '販促ツールデザイン',

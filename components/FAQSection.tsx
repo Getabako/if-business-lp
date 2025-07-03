@@ -51,7 +51,7 @@ export default function FAQSection() {
     <section
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden py-20"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://service.if-juku.net/images/15.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://if-juku.net/wp-content/uploads/images/15.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

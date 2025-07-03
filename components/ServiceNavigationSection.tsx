@@ -69,7 +69,7 @@ export default function ServiceNavigationSection() {
       id="service-navigation"
       className="relative min-h-screen flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://service.if-juku.net/images/1.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://if-juku.net/wp-content/uploads/images/1.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
