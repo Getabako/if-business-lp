@@ -41,8 +41,8 @@ export default function ContactSection() {
     setSubmitMessage('')
     
     try {
-      // Google Apps ScriptのWebアプリURLに置き換えてください
-      const GAS_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'
+      // Google Apps ScriptのWebアプリURL
+      const GAS_URL = 'https://script.google.com/macros/s/AKfycbw1yDTYPj30Dndo53KQ4ceyQ7Ss0ktzIMxIj0GTc4IakZA86r_4Q3gdj18aul2QkGjqYg/exec'
       
       const formBody = new URLSearchParams({
         name: formData.name,
