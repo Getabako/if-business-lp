@@ -210,7 +210,7 @@ ${formData.message}
 if塾
 TEL: 080-4937-7121
 EMAIL: info@if-juku.net
-WEB: https://if-business-lp.vercel.app
+WEB: https://service.if-juku.net
 
 本メールは自動送信です。このメールに返信いただいても対応できませんので、
 ご質問等は改めて上記連絡先までお願いいたします。
