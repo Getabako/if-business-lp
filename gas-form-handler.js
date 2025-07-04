@@ -207,8 +207,7 @@ ${formData.message}
 お客様の事業成功に向けて、全力でサポートいたします。
 
 ---
-株式会社if
-〒住所情報
+if塾
 TEL: 080-4937-7121
 EMAIL: info@if-juku.net
 WEB: https://if-business-lp.vercel.app
