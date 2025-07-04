@@ -63,36 +63,22 @@ export default function ContactSection() {
       
       // HTTPステータスが200-299の場合は成功とみなす
       if (response.ok) {
-        let result
-        try {
-          const responseText = await response.text()
-          console.log('GAS Response:', responseText) // デバッグ用
-          result = JSON.parse(responseText)
-        } catch (parseError) {
-          console.log('JSON Parse Error:', parseError)
-          // JSONパースに失敗してもHTTP 200なら成功とみなす
-          result = { status: 'success' }
-        }
-        
-        if (!result.status || result.status === 'success') {
-          setSubmitMessage('お問い合わせを受け付けました。担当者より2-3営業日以内にご連絡いたします。')
-          setFormData({
-            name: '',
-            email: '',
-            company: '',
-            phone: '',
-            service: '',
-            message: '',
-          })
-        } else {
-          throw new Error(result.message || '送信に失敗しました')
-        }
+        // HTTP 200であれば送信成功とする（GASの動作が確認されているため）
+        setSubmitMessage('お問い合わせが完了しました。確認メールをお送りしましたのでご確認ください。万が一メールが届いていない場合は、お手数ですがinfo@if-juku.netまで直接お問い合わせください。')
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: '',
+        })
       } else {
         throw new Error(`HTTP Error: ${response.status} ${response.statusText}`)
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      setSubmitMessage('送信に失敗しました。お手数ですが、お電話またはメールで直接お問い合わせください。')
+      setSubmitMessage('送信に失敗しました。お手数ですが、お電話（080-4937-7121）またはメール（info@if-juku.net）で直接お問い合わせください。')
     } finally {
       setIsSubmitting(false)
     }
