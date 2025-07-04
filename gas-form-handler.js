@@ -11,23 +11,12 @@ const SHEET_NAME = 'シート1'; // シート名（必要に応じて変更）
  * CORS対応のためのGETリクエスト処理
  */
 function doGet(e) {
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
-    'Access-Control-Allow-Headers': 'Content-Type'
-  };
-  
-  const output = ContentService.createTextOutput(JSON.stringify({ 
-    status: 'ready',
-    message: 'Form handler is ready' 
-  }));
-  output.setMimeType(ContentService.MimeType.JSON);
-  
-  Object.keys(corsHeaders).forEach(key => {
-    output.setHeader(key, corsHeaders[key]);
-  });
-  
-  return output;
+  return ContentService
+    .createTextOutput(JSON.stringify({ 
+      status: 'ready',
+      message: 'Form handler is ready' 
+    }))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 /**
@@ -35,15 +24,8 @@ function doGet(e) {
  */
 function doPost(e) {
   try {
-    // CORS対応ヘッダー
-    const corsHeaders = {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    };
-    
     // OPTIONSリクエストの場合
-    if (!e.parameter) {
+    if (!e || !e.parameter) {
       return ContentService
         .createTextOutput(JSON.stringify({ status: 'ok' }))
         .setMimeType(ContentService.MimeType.JSON);
@@ -72,40 +54,23 @@ function doPost(e) {
     sendNotificationEmails(formData);
     
     // 成功レスポンス
-    const output = ContentService.createTextOutput(JSON.stringify({ 
-      status: 'success', 
-      message: 'お問い合わせを受け付けました' 
-    }));
-    output.setMimeType(ContentService.MimeType.JSON);
-    
-    // CORSヘッダーを設定
-    Object.keys(corsHeaders).forEach(key => {
-      output.setHeader(key, corsHeaders[key]);
-    });
-    
-    return output;
+    return ContentService
+      .createTextOutput(JSON.stringify({ 
+        status: 'success', 
+        message: 'お問い合わせを受け付けました' 
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
     
   } catch (error) {
     console.error('Error:', error);
     
     // エラーレスポンス
-    const errorOutput = ContentService.createTextOutput(JSON.stringify({ 
-      status: 'error', 
-      message: error.toString() 
-    }));
-    errorOutput.setMimeType(ContentService.MimeType.JSON);
-    
-    // CORSヘッダーを設定
-    const corsHeaders = {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    };
-    Object.keys(corsHeaders).forEach(key => {
-      errorOutput.setHeader(key, corsHeaders[key]);
-    });
-    
-    return errorOutput;
+    return ContentService
+      .createTextOutput(JSON.stringify({ 
+        status: 'error', 
+        message: error.toString() 
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
