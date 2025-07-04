@@ -23,11 +23,11 @@ export default function HeroSection() {
 
   // 動画ソースの選択をクライアント側で行う
   const getVideoSrc = () => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      return 'https://if-juku.net/wp-content/uploads/videos/lpmoviesp.mp4';
+      if (typeof window !== 'undefined' && window.innerWidth < 768) {
+        return 'https://service.if-juku.net/videos/lpmoviesp.mp4';
+      }
+      return 'https://service.if-juku.net/videos/lpmoviepc.mp4';
     }
-    return 'https://if-juku.net/wp-content/uploads/videos/lpmoviepc.mp4';
-  }
 
   return (
     <section 
