@@ -163,7 +163,7 @@ export default function AITrainingSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="/images/4.png"
+                src="/images/2.png"
                 alt="AI人材育成プラン"
                 width={600}
                 height={400}

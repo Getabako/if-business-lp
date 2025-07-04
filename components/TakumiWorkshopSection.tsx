@@ -36,7 +36,7 @@ export default function TakumiWorkshopSection() {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url('/images/12.png')`,
+            backgroundImage: `url('/images/10.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',

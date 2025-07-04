@@ -94,7 +94,7 @@ export default function InokuraSection() {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `url('/images/13.png')`,
+            backgroundImage: `url('/images/11.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

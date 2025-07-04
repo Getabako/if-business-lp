@@ -63,7 +63,7 @@ export default function AIPersonalAdvisorSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
               <Image
-                src="/images/3.png"
+                src="/images/1.png"
                 alt="AIパーソナル顧問プラン"
                 width={600}
                 height={400}
