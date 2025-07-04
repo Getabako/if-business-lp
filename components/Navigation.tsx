@@ -128,7 +128,7 @@ export default function Navigation() {
               style={{ cursor: 'pointer' }}
             >
               <Image
-                src="https://if-juku.net/wp-content/uploads/images/-1.png"
+                src="/images/-1.png"
                 alt="if(Business) ロゴ"
                 width={50}
                 height={50}

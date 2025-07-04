@@ -1,0 +1,12 @@
+# CORS設定（エックスサーバーのuploadsディレクトリ用）
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
+</IfModule>
+
+# 画像と動画の直接アクセスを許可
+<FilesMatch "\.(jpg|jpeg|png|gif|mp4|webm|ogg)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>

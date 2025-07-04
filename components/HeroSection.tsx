@@ -24,9 +24,9 @@ export default function HeroSection() {
   // 動画ソースの選択をクライアント側で行う
   const getVideoSrc = () => {
     if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      return 'https://if-juku.net/wp-content/uploads/videos/lpmoviesp.mp4';
+      return '/videos/lpmoviesp.mp4';
     }
-    return 'https://if-juku.net/wp-content/uploads/videos/lpmoviepc.mp4';
+    return '/videos/lpmoviepc.mp4';
   }
 
   return (
@@ -52,7 +52,7 @@ export default function HeroSection() {
           <div 
             className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://if-juku.net/wp-content/uploads/images/0.png')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/0.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
