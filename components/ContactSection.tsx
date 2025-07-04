@@ -6,32 +6,82 @@ import { useState } from 'react'
 interface FormData {
   name: string
   email: string
-  inquiryType: string
+  company: string
+  phone: string
+  service: string
   message: string
 }
 
-const inquiryTypes = [
-  'AI相談',
-  'AI研修',
-  'AIカスタム開発',
-  'ICT開発',
-  'AI講座',
-  '匠工房',
-  'イノクラ',
+const serviceTypes = [
+  'AIパーソナル顧問プラン',
+  'AI人材育成プラン',
+  'AI開発支援プラン',
+  'ICT開発サービス',
+  'AIマーケティングサポート',
+  'AI講座プログラム',
+  'その他',
 ]
 
 export default function ContactSection() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    inquiryType: '',
+    company: '',
+    phone: '',
+    service: '',
     message: '',
   })
+  
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('お問い合わせありがとうございます。担当者より連絡させていただきます。')
+    setIsSubmitting(true)
+    setSubmitMessage('')
+    
+    try {
+      // Google Apps ScriptのWebアプリURLに置き換えてください
+      const GAS_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'
+      
+      const formBody = new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+      })
+      
+      const response = await fetch(GAS_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formBody,
+      })
+      
+      const result = await response.json()
+      
+      if (result.status === 'success') {
+        setSubmitMessage('お問い合わせを受け付けました。担当者より2-3営業日以内にご連絡いたします。')
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: '',
+        })
+      } else {
+        throw new Error(result.message || '送信に失敗しました')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitMessage('送信に失敗しました。お手数ですが、お電話またはメールで直接お問い合わせください。')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -135,19 +185,46 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
-                  お問い合わせ種別 <span className="text-red-500">*</span>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  会社名・団体名
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  お電話番号
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  ご興味のあるサービス
                 </label>
                 <select
-                  id="inquiryType"
-                  name="inquiryType"
-                  required
-                  value={formData.inquiryType}
+                  id="service"
+                  name="service"
+                  value={formData.service}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                 >
                   <option value="">選択してください</option>
-                  {inquiryTypes.map((type) => (
+                  {serviceTypes.map((type) => (
                     <option key={type} value={type}>
                       {type}
                     </option>
@@ -170,13 +247,20 @@ export default function ContactSection() {
                 />
               </div>
 
+              {submitMessage && (
+                <div className={`p-4 rounded-lg ${submitMessage.includes('失敗') ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                  {submitMessage}
+                </div>
+              )}
+              
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full btn-primary"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                送信する
+                {isSubmitting ? '送信中...' : '送信する'}
               </motion.button>
             </div>
           </motion.form>
