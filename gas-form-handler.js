@@ -8,23 +8,45 @@ const SPREADSHEET_ID = '1bRaJBgNaEyuF9QwFEwjCWS2lGdeDAltA9x21IrVuKAM';
 const SHEET_NAME = 'シート1'; // シート名（必要に応じて変更）
 
 /**
+ * CORS対応のためのGETリクエスト処理
+ */
+function doGet(e) {
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  };
+  
+  const output = ContentService.createTextOutput(JSON.stringify({ 
+    status: 'ready',
+    message: 'Form handler is ready' 
+  }));
+  output.setMimeType(ContentService.MimeType.JSON);
+  
+  Object.keys(corsHeaders).forEach(key => {
+    output.setHeader(key, corsHeaders[key]);
+  });
+  
+  return output;
+}
+
+/**
  * フォームデータを受信してスプレッドシートに保存し、メール通知を送信
  */
 function doPost(e) {
   try {
-    // CORS対応
-    const response = {
+    // CORS対応ヘッダー
+    const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type'
     };
     
     // OPTIONSリクエストの場合
-    if (e.parameter === undefined) {
+    if (!e.parameter) {
       return ContentService
         .createTextOutput(JSON.stringify({ status: 'ok' }))
-        .setMimeType(ContentService.MimeType.JSON)
-        .setHeaders(response);
+        .setMimeType(ContentService.MimeType.JSON);
     }
     
     // フォームデータを取得
@@ -49,27 +71,41 @@ function doPost(e) {
     // メール通知送信
     sendNotificationEmails(formData);
     
-    return ContentService
-      .createTextOutput(JSON.stringify({ 
-        status: 'success', 
-        message: 'お問い合わせを受け付けました' 
-      }))
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeaders(response);
+    // 成功レスポンス
+    const output = ContentService.createTextOutput(JSON.stringify({ 
+      status: 'success', 
+      message: 'お問い合わせを受け付けました' 
+    }));
+    output.setMimeType(ContentService.MimeType.JSON);
+    
+    // CORSヘッダーを設定
+    Object.keys(corsHeaders).forEach(key => {
+      output.setHeader(key, corsHeaders[key]);
+    });
+    
+    return output;
     
   } catch (error) {
     console.error('Error:', error);
-    return ContentService
-      .createTextOutput(JSON.stringify({ 
-        status: 'error', 
-        message: error.toString() 
-      }))
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeaders({
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type'
-      });
+    
+    // エラーレスポンス
+    const errorOutput = ContentService.createTextOutput(JSON.stringify({ 
+      status: 'error', 
+      message: error.toString() 
+    }));
+    errorOutput.setMimeType(ContentService.MimeType.JSON);
+    
+    // CORSヘッダーを設定
+    const corsHeaders = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    };
+    Object.keys(corsHeaders).forEach(key => {
+      errorOutput.setHeader(key, corsHeaders[key]);
+    });
+    
+    return errorOutput;
   }
 }
 
