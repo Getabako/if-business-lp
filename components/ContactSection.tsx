@@ -61,20 +61,34 @@ export default function ContactSection() {
         body: formBody,
       })
       
-      const result = await response.json()
-      
-      if (result.status === 'success') {
-        setSubmitMessage('お問い合わせを受け付けました。担当者より2-3営業日以内にご連絡いたします。')
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          phone: '',
-          service: '',
-          message: '',
-        })
+      // HTTPステータスが200-299の場合は成功とみなす
+      if (response.ok) {
+        let result
+        try {
+          const responseText = await response.text()
+          console.log('GAS Response:', responseText) // デバッグ用
+          result = JSON.parse(responseText)
+        } catch (parseError) {
+          console.log('JSON Parse Error:', parseError)
+          // JSONパースに失敗してもHTTP 200なら成功とみなす
+          result = { status: 'success' }
+        }
+        
+        if (!result.status || result.status === 'success') {
+          setSubmitMessage('お問い合わせを受け付けました。担当者より2-3営業日以内にご連絡いたします。')
+          setFormData({
+            name: '',
+            email: '',
+            company: '',
+            phone: '',
+            service: '',
+            message: '',
+          })
+        } else {
+          throw new Error(result.message || '送信に失敗しました')
+        }
       } else {
-        throw new Error(result.message || '送信に失敗しました')
+        throw new Error(`HTTP Error: ${response.status} ${response.statusText}`)
       }
     } catch (error) {
       console.error('Error submitting form:', error)
